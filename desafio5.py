@@ -12,10 +12,13 @@ else:
 
 # Exemplo 2 com um número escolhido aleatóriamente!
 from random import randint
-computador = randint(0, 10) # Faz o computador gerar um número aleatório de 0 a 5
-print('-=-' * 10)
+computador = randint(0, 5) # Faz o computador gerar um número aleatório de 0 a 5
+print('-=-' * 5)
 print('Vou pensar em um número entre 0 e 5. Tente advinhar! ')
-print('-=-' * 10)
+print('-=-' * 5)
 jogador = int(input('Em que número eu pensei? '))
-
-
+if jogador == computador:
+    print('Você acertou!')
+else: 
+    print('Você errou! Eu pensei no número {} e não no {}!'.format(computador, jogador))
+    
